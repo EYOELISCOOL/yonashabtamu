@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ብሔራዊ መታወቂያ Ethiopian National ID</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* TOP BAR */
+.topbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.topbar span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* MAIN CARD */
+.container {
+  width: 420px;
+  background: rgba(30,41,59,0.9);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header p {
+  font-size: 11px;
+  color: #f87171;
+}
+
+/* PROFILE */
+.profile {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile img {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #22c55e;
+}
+
+/* INFO */
+.info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.label {
+  color: #94a3b8;
+}
+
+/* DETAILS */
+.details {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+/* ID IMAGE */
+.id-image {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 2px solid #38bdf8;
+}
+
+/* STATUS */
+.status {
+  margin-top: 15px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: #022c22;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+/* BUTTON */
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 11px;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGO AREA -->
+<div class="topbar">
+  <img src="./logo.jfif" alt="Logo">
+  <span>National ID</span>
+</div>
+
+<!-- MAIN CARD -->
+<div class="container">
+  <!-- LOGO AREA -->
+<div class="topbar">
+  <img src="./logo.jfif" alt="Logo">
+  <span>ፋይዳ</span>
+</div>
+
+  <div class="header">
+    <h2>የማንነት ማረጋገጫ </h2>
+    <h2>Identity Verification</h2>
+    <p> </p>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <img src="./Pfp.png">
+
+    <div class="info">
+      <p><span class="label">Name:</span> ዮናስ ሀብታሙ ሽታ / Yonas Habtamu Shitta </p>
+      <p><span class="label">Gender:</span> ወንድ / Male</p>
+      <p><span class="label">DOB:</span> 25/04/1997 / 03 Jan 2005</p>
+      <p><span class="label">Nationality:</span> ኢትዮጵያዊ / Ethiopian</p>
+    </div>
+  </div>
+
+  <!-- DETAILS -->
+  <div class="details">
+    <p><span class="label">ID Number:</span>4780674891576953</p>
+    <p><span class="label">Address: አዲስ አበባ ከተማ ለሚኩራ ክፍለ ከተማ ወረዳ 06:: / Addis Ababa City, Lemikura Subcity Woreda 06.</span> </p>
+    <p><span class="label">Expires:</span> 28 Jan 2033</p>
+  </div>
+
+  <!-- ID IMAGE -->
+  <img src="./Front.jpg" class="id-image">
+
+  <!-- STATUS -->
+  <div class="status" id="status">✔ ማንነት ተረጋግጧል / Identity Verified</div>
+
+  <button onclick="scan()">Run Verification</button>
+</div>
+
+<script>
+function scan() {
+  const status = document.getElementById("status");
+
+  status.innerHTML = "Scanning...";
+  status.style.background = "#78350f";
+  status.style.color = "#facc15";
+
+  setTimeout(() => {
+    status.innerHTML = "✔ ማንነት ተረጋግጧል / Identity Verified";
+    status.style.background = "#022c22";
+    status.style.color = "#4ade80";
+  }, 2000);
+}
+</script>
+
+</body>
+</html>
